@@ -1,0 +1,148 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" type="text/css" href="/css/results.css">
+</head>
+
+<body style="margin: 0px">
+
+
+    <nav class="header">
+        <!-- Purple Background -->
+        <div class="purple_background">
+            <img class="background" src="/svg/background_1.svg" alt="background">
+        </div>
+
+        <div class="nav_centered">
+            <div class="logo" style="font-size: 36px;">
+                <a style="text-decoration: none; color: #ffffff;" href="/" target="_top" rel="website_link">Eyers
+                </a>
+            </div>
+
+            <div class="search_item">
+                <!-- Search Bar -->
+                <div class="search_bar">
+                    <form action="/results" method="get" autocomplete="off">
+                        <div class="sub_logo">E</div>
+                        <div id="datasets">
+                            <input type="text" name="search" class="typeahead" required
+                                placeholder="Search Query / Enter any URL" value="<%= query %>">
+                        </div>
+                        <!-- autofocus -->
+                        <div class="magnifier">
+                            <button type="submit">
+                                <img src="/svg/magnifier_1.svg" alt="magnifier" width="24px" height="24px">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="align_icons">
+                <!-- Lang. translation Icon -->
+                <div id="language_translation" class="lang_transation">
+                    <div class="language_icon">
+                        <img src="/svg/language_icon.svg" alt="account icon">
+                    </div>
+                </div>
+
+                <!-- Account Icon -->
+                <div id="user_login" class="account">
+                    <div class="account_icon">
+                        <img src="/svg/account_icon.svg" alt="account icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="load_dot d1"></div>
+            <div class="load_dot d2"></div>
+            <div class="load_dot d3"></div>
+            <div class="load_dot d4"></div>
+        </div>
+    </div>
+    <div class="centered results">
+        <!-- Eyers Search results -->
+        <div class="heading_1">Search Results</div>
+        <div class="search_results_grid">
+            <div class="documents_grid">
+                <!--Eyers Search Documents starts here -->
+                <% if (page_results.length > 0) { %>
+                <% for (let i = 0; i < page_results.length; i++) { %>
+                <div class="result">
+                    <div class="result_padding">
+                        <div class="website_title">
+                            <a style="text-decoration: none; color: #3898ec;" href="<%= page_results[i].link %>"
+                                target="_top" rel="website_link"><%= page_results[i].title %>
+                            </a>
+                        </div>
+                        <div class="dot"></div>
+                        <div class="website_description"><%= page_results[i].description %>
+                        </div>
+                        <div class="website_link">
+                            <a style="text-decoration: none; color: #008b2d;" href="<%= page_results[i].link %>"
+                                target="_top" rel="website_link"><%= page_results[i].link %>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% } else { %>
+                <h3 style="padding-left: 30px;">No Searched Results!</h3>
+                <% } %>
+                <!--Eyers Search Documents ends here. -->
+
+                <div class="pager">
+                    <% if (prev_no == 0) { %><div style="visibility: hidden;">h</div><% } %>
+                    <% if (prev_no != 0) { %>
+                    <div class="pre"> <a href="?<%= prev %>" style="color: black">Previous</a></div>
+                    <% } %>
+                    <% if (page_results.length == 12) { %>
+                    <div class="next"><a href="?<%= next %>" style="color: black">Next</a></div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="images">
+                <% if (image_result.length > 0) { %>
+                <div class="image_head">
+                    <div class="image-sub_heading">Images</div>
+                    <div class="button_text"> VIEW MORE</div>
+                </div>
+                <div class="image_grid">
+                    <!--Eyers Search Images here -->
+
+                    <% for (let i = 0; i < image_result.length; i++) { %>
+                    <div class="image">
+                        <a href="<%= image_result[i].image_url %>">
+                            <img src="<%= image_result[i].image_url %>" alt="<%= image_result[i].image_keyword %>"></a>
+                    </div>
+                    <% } %>
+
+                </div>
+                <% } else { %>
+                <h3>No Searched Images!</h3>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <%- include('./includes/footer.ejs') %>
+    <!-- Language Modal Section -->
+    <%- include('./includes/language_popup.ejs') %>
+    <!-- User Authentication Modal Section -->
+    <%- include('./includes/auth_popup.ejs') %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.js"></script>
+    <script src="/js/language_popup-modal.js"></script>
+    <script src="/js/auth_popup-modal.js"></script>
+
+    <!-- Typeahead  -->
+    <script src="/js/typeahead.js"></script>
+
+    <script src="/js/results_util.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="magnifier" transform="translate(-0.001)">
+    <path id="Path_3" d="M304.924,301.749l-5.506-5.506a10.6,10.6,0,0,1-3.182,3.182l5.506,5.506a2.25,2.25,0,0,0,3.182-3.182Z" transform="translate(-281.582 -281.59)" fill="#7c3dee"/>
+    <path id="Path_2" d="M18,9a9,9,0,1,0-9,9A9,9,0,0,0,18,9ZM9,15.75A6.75,6.75,0,1,1,15.751,9,6.757,6.757,0,0,1,9,15.75Z" fill="#7c3dee"/>
+    <path id="Path_1" d="M75.817,81.066h1.5a3.754,3.754,0,0,1,3.75-3.75v-1.5A5.256,5.256,0,0,0,75.817,81.066Z" transform="translate(-72.066 -72.066)" fill="#7c3dee"/>
+  </g>
+</svg>

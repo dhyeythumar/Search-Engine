@@ -6,6 +6,19 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Ignore files
+.vscode
+data
+models/google_api.js
+Python_scripts/__pycache__
+Python_scripts/data_folder
+Python_scripts/____11.txt
+Python_scripts/TODO.txt
+Python_scripts/temp.py
+Python_scripts/user_agent_list.txt
+Python_scripts/web_crawler.py
+views/HTML
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

@@ -1,0 +1,49 @@
+/*Codepen by Seocips [Matrix Rain 404]*/
+canvas {
+    display: block;
+    z-index: 77777;
+}
+
+body {
+    background: #333;
+    margin: 0;
+    padding: 0;
+    /* font-family: calibri; */
+    color: #ddd;
+}
+.error-page {
+    position: fixed !important;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 88888;
+    text-shadow: 0 3px 4px #000;
+}
+
+.error-inner {
+    margin: 11% auto;
+}
+
+.error-inner .box-404 {
+    width: 200px;
+    height: 200px;
+    background: rgba(1, 0, 1, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    line-height: 200px;
+    border-radius: 10px;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 3px 4px #000;
+    border: 0px;
+    text-shadow: 0 3px 4px #000;
+}
+
+.error-inner h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}

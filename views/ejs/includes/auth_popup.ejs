@@ -1,0 +1,54 @@
+<div id="auth_modal" class="modal">
+    <span class="close">×</span>
+    <div class="Sub_heading modal_heading" style="width: 820px !important; margin-top: 60px; margin-left: 355px">User
+        Details</div>
+    <div class="modal-content" style="width: 800px; height: auto">
+        <form class="user-form" name="user_form"
+            action="<% if (user_auth) { %>/edit-user<% } else { %>/user-sign_up<% } %>" method="POST"
+            autocomplete="off">
+            <% if (user_auth) { %>
+            <input type="hidden" name="user_id" value="<% if (user_auth) { %> <%= user.id %> <% } %>">
+            <% } %>
+            <div class=" " id="toggle_hide">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."
+                    value="<% if (user_auth) { %><%= user.firstname %><% } %>">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.."
+                    value="<% if (user_auth) { %><%= user.lastname %><% } %>">
+            </div>
+
+            <div class=" " id="toggle_updown">
+                <label for="e-mail">Email</label>
+                <input type="email" id="e-mail" name="email" placeholder="Your e-mail.." required
+                    value="<% if (user_auth) { %><%= user.email %><% } %>">
+                <% if (!user_auth) { %>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your password.." required>
+                <% } %>
+            </div>
+
+            <input type="hidden" name="form_after_action" value="">
+            <input type="hidden" name="page_loc" value="">
+
+            <% if (!user_auth) { %>
+
+            <button type="submit" name="submit">Sign Up</button>
+            <span id="toggle_span_ele" onclick="toggle_form_action()">Sign In</span>
+            <% } else { %>
+            <button type="submit" name="submit" onclick="user_form.form_after_action.value = 'Signout'">Sign
+                Out</button>
+            <button type="submit" name="submit" onclick="user_form.form_after_action.value = 'Update'">Update</button>
+            <% } %>
+        </form>
+        <script>
+            document.getElementsByName('page_loc')[0].value = '/'.concat(window.location.href.split('/').pop());
+        </script>
+    </div>
+</div>
+
+
+
+<!-- <script>
+                location.reload(true);
+            </script> -->

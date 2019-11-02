@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: #7c3dee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+svg {
+    top: 60px;
+    width: 24em;
+}
+h3 {
+    display: none;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    height: inherit;
+}

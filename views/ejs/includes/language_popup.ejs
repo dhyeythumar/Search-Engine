@@ -1,0 +1,76 @@
+<div id="language_modal" class="modal">
+    <span class="close">×</span>
+    <div class="Sub_heading modal_heading">Language Translation</div>
+    <div class="modal-content">
+        <div class="enter_text">
+            <div class="lang_dropdown">
+                <select name="source_language_code">
+                    <option value="null">Select Language :</option>
+                    <option value="null">Detect Language</option>
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                    <option value="hy">Armenian</option>
+                    <option value="bn">Bengali</option>
+                    <option value="bg">Bulgarian</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="cs">Czech</option>
+                    <option value="nl">Dutch</option>
+                    <option value="fr">French</option>
+                    <option value="ka">Georgian</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="hi">Hindi</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="kn">Kannada</option>
+                    <option value="ko">Korean</option>
+                    <option value="la">Latin</option>
+                    <option value="mr">Marathi</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="ru">Russian</option>
+                </select>
+            </div>
+            <textarea class="input_textarea" name="input_language" placeholder="Enter text..." required=""
+                onchange="Ajax_call()"></textarea>
+            <button id="fetch_lang_trans" class="trans_button" type="submit" onclick="Ajax_call()">Translate</button>
+        </div>
+
+        <div class="translated_text">
+            <div class="lang_dropdown">
+                <select name="dest_language_code">
+                    <option value="null">Select Language:</option>
+                    <option value="ar">Arabic</option>
+                    <option value="hy">Armenian</option>
+                    <option value="bn">Bengali</option>
+                    <option value="bg">Bulgarian</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="cs">Czech</option>
+                    <option value="nl">Dutch</option>
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="ka">Georgian</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="hi">Hindi</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="kn">Kannada</option>
+                    <option value="ko">Korean</option>
+                    <option value="la">Latin</option>
+                    <option value="mr">Marathi</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="ru">Russian</option>
+                </select>
+            </div>
+            <div id="append_output_lang" class="input_textarea output_lang">
+                <span id="hide_placeholder" lang="">Translated text here</span>
+                <div class="loader-wrapper">
+                    <div class="loader">
+                        <div class="load_dot d1"></div>
+                        <div class="load_dot d2"></div>
+                        <div class="load_dot d3"></div>
+                        <div class="load_dot d4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

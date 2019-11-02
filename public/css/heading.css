@@ -1,0 +1,35 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #7c3dee;
+    margin: 0%;
+    padding: 0%;
+}
+.head {
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    padding-top: 289px;
+    z-index: 2;
+}
+h1 {
+    width: 222px;
+    height: 111px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    align-content: center;
+}
+svg {
+    /* top: 100px; */
+    width: 24em;
+}
+.sub_head {
+    border: 0px;
+    width: 100%;
+    height: auto;
+}
+/* #head_svg {
+    width: 222px;
+    height: 111px;
+} */

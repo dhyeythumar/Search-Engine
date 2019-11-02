@@ -1,0 +1,861 @@
+/* Common CSS file */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    min-width: 1530px;
+}
+.centered {
+    align-items: flex-start;
+    overflow-y: scroll;
+    justify-content: center;
+    overflow: visible;
+    width: 1256px;
+    padding: 0px;
+    margin: 0 auto 0 auto;
+}
+::selection {
+    color: #ffffff;
+    background: #8952ee;
+}
+a {
+    color: #3898ec;
+    text-decoration: none;
+}
+a:visited {
+    color: #3898ec;
+    text-decoration: none;
+}
+a:hover {
+    color: #3898ec;
+    text-decoration: none;
+}
+a:active {
+    color: #3898ec;
+    text-decoration: none;
+}
+
+/* CSS for nav-bar [common for both] */
+.nav_centered {
+    width: 1256px;
+    height: inherit;
+    display: grid;
+    margin: auto;
+    grid-column-gap: 0px;
+    grid-template-columns: 106px 954px 196px;
+    justify-content: space-around;
+}
+
+.logo {
+    box-sizing: border-box;
+    padding-top: 26px;
+    height: inherit;
+    font-family: 'Kaushan Script', Arial;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+.search_item {
+    width: 954px;
+    height: inherit;
+}
+.align_icons {
+    box-sizing: border-box;
+    height: inherit;
+    display: flex;
+    padding: 36px 22px 36px 70px;
+}
+.lang_transation,
+.account {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 6px 0px rgba(145, 145, 145, 30%);
+}
+.lang_transation,
+.account:hover {
+    cursor: pointer;
+}
+.language_icon {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+}
+.language_icon > img,
+.language_icon > svg {
+    width: 22px;
+    height: 22px;
+}
+
+.account {
+    margin-left: 24px;
+}
+.account_icon {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+.account_icon > img,
+.account_icon > svg {
+    height: 26px;
+    width: 21px;
+}
+/* ========================= */
+/* CSS for search bar [common for both] */
+.search_bar {
+    box-sizing: border-box;
+    position: absolute;
+    width: 608px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 22px;
+}
+datalist {
+    display: block !important;
+    width: 608px;
+}
+option {
+    box-sizing: border-box;
+    width: inherit;
+    /* height: auto; */
+    height: 38px;
+    line-height: 18px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.sub_logo {
+    position: absolute;
+    left: 20px;
+    top: 4px;
+    width: 18px;
+    height: 36px;
+    font-size: 25px;
+    font-family: 'Kaushan Script', Arial;
+    color: #7c3dee;
+    font-weight: 400;
+}
+
+/* .twitter-typeahead{
+    padding-bottom: 14px;
+} */
+input[type='text'] {
+    box-sizing: border-box;
+    border: 0px solid black;
+    height: 44px;
+    width: 608px;
+    margin: 0;
+    padding-left: 58px;
+    padding-right: 58px;
+    background: transparent;
+    font-size: 18px;
+    border-radius: 22px;
+    font-family: 'Philosopher', Arial;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000000;
+    outline: none;
+}
+#datasets .league-name {
+    margin: 0 20px 5px 20px;
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
+}
+.tt-menu {
+    position: relative !important;
+    font-size: 17px;
+}
+.tt-suggestion {
+    padding-left: 58px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.tt-suggestion:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+}
+.tt-cursor {
+    background-color: #dfe1e5;
+}
+.magnifier {
+    position: absolute;
+    left: 564px;
+    top: 10px;
+    z-index: 1;
+}
+.magnifier:hover {
+    cursor: pointer;
+}
+button {
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    border: 0px;
+    outline: none;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.Sub_heading {
+    width: auto;
+    height: 22px;
+    line-height: 15px;
+    font-size: 20px;
+    padding-top: 28px;
+    font-family: 'Philosopher', Arial;
+    color: #7c3dee;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+/* =============================== */
+/* CSS for footer [common for both the pages] */
+.footer {
+    position: relative;
+    margin: 60px 0 0 0;
+    width: 100%;
+    height: 100px;
+    background-color: #8952ee;
+}
+.footer_centered {
+    width: 1256px;
+    height: 100%;
+    display: grid;
+    margin: auto;
+    grid-gap: 0px;
+    grid-template-columns: 49.5% 1% 49.5%;
+}
+.copyright {
+    position: relative;
+    margin: auto;
+    margin-right: 36px;
+    width: 114px;
+    height: 46px;
+}
+
+.copyright_text {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 83px;
+    height: 19px;
+    font-size: 17px;
+    text-align: right;
+    font-family: 'Philosopher', Arial;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.year {
+    position: absolute;
+    left: 46px;
+    top: 27px;
+    width: 37px;
+    height: 19px;
+    font-size: 17px;
+    text-align: right;
+    font-family: 'Philosopher', Arial;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.copyright_icon {
+    position: absolute;
+    left: 95px;
+    top: 0px;
+    width: 19px;
+    height: 19px;
+}
+.copyright_icon > img,
+.copyright_icon > svg {
+    height: 19px;
+    width: 19px;
+    box-shadow: none;
+}
+
+.footer_divider {
+    margin: auto;
+    align-content: center;
+    width: 2px;
+    height: 66px;
+}
+
+.reference_link {
+    position: relative;
+    margin: auto;
+    margin-left: 30px;
+    width: 360px;
+    height: 46px;
+}
+.text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 95px;
+    height: 18px;
+    font-size: 16px;
+    font-family: 'Philosopher', Arial;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.reference_website_link {
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 360px;
+    height: 20px;
+    font-size: 18px;
+    font-family: 'Philosopher', Arial;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 2px;
+    /* border: 1px solid black; */
+}
+.reference_website_link a:hover {
+    cursor: pointer;
+}
+/* ============================ */
+/* CSS for Modal */
+
+/* The Modal (background) */
+.modal {
+    box-sizing: border-box;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal_heading {
+    width: 1300px !important;
+    margin: 100px auto 14px;
+    color: #ffffff !important;
+}
+/* Modal Content */
+.modal-content {
+    width: 1280px;
+    max-height: 514px;
+    margin: 10px auto 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px 0 rgb(255, 255, 255, 16%);
+    background-color: #ffffff;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 1s;
+    animation-name: zoom;
+    animation-duration: 1s;
+    display: flex;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0.6);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* >> Modal content for lang-trans */
+.enter_text,
+.translated_text {
+    flex: 50%;
+    /* width: 50%; */
+    height: inherit;
+    /* background-color: #fffadd; */
+    background-color: #ffffff;
+    /* border: 1px solid black; */
+}
+.enter_text {
+    border-radius: 8px 0 0 8px;
+    border-right: 1.4px dashed #7c3dee;
+}
+.translated_text {
+    border-radius: 0 8px 8px 0;
+}
+
+/* CSS for Dropdown to select language*/
+.lang_dropdown {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.lang_dropdown select {
+    display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+    color: #00c6ff;
+    background-color: transparent;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: '';
+    top: 14px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    /* padding-right: 20px; */
+    border: 6px solid transparent;
+    border-color: #7c3dee transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #7c3dee transparent;
+    top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    /* height: 200px;
+    overflow-y: scroll; */
+    color: #7c3dee;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 700;
+}
+
+/*style items (options):*/
+.select-items {
+    height: 360px;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: #fafafa;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* =========================== */
+
+.input_textarea {
+    box-sizing: border-box;
+    width: 95%;
+    height: 300px;
+    padding: 6px;
+    border: 1px solid #7c3dee;
+    border-radius: 4px;
+    font-family: 'Philosopher', Arial;
+    outline: none;
+    background-color: transparent;
+    line-height: 20px;
+    font-size: 18px;
+    margin: 20px 20px 10px 10px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    resize: none;
+}
+.output_lang {
+    margin: 20px 10px 10px 20px;
+    border: 0px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.trans_button,
+.user-form button {
+    box-sizing: border-box;
+    width: 20%;
+    height: auto;
+    padding: 12px 20px;
+    color: #7c3dee;
+    background-color: transparent;
+    border: 1px solid #7c3dee;
+    border-radius: 4px;
+    font-family: 'Philosopher', Arial;
+    outline: none;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 0 20px 20px 10px;
+    cursor: pointer;
+}
+.trans_button:hover,
+.user-form button:hover {
+    background-color: #7c3dee;
+    color: #ffffff;
+}
+/* =============================== */
+/* Modal content for user-login */
+.user-form {
+    width: 100%;
+    height: 100%;
+    padding: 20px 60px;
+}
+.user-form input[type='text'],
+.user-form input[type='email'],
+.user-form input[type='password'] {
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+    padding: 12px 20px;
+    margin: 14px 0 28px;
+    display: inline-block;
+    border: 1px solid #7c3dee;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+.user-form label,
+.user-form label {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#toggle_span_ele {
+    font-weight: 600;
+    margin-left: 468px;
+}
+#toggle_span_ele:hover {
+    cursor: pointer;
+}
+._toggle_hide {
+    animation: hide 1s linear 0s;
+}
+._toggle_show {
+    animation: show 1s linear 0s;
+}
+@keyframes hide {
+    0% {
+        opacity: 0.8;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 0.6;
+        transform: translate(50px, 0);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translate(100px, 0);
+    }
+    75% {
+        opacity: 0.2;
+        transform: translate(150px, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(200px, 0);
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0.2;
+        transform: translate(200px, 0);
+    }
+    25% {
+        opacity: 0.4;
+        transform: translate(150px, 0);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translate(100px, 0);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translate(50px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.user-form button {
+    margin: 0px 16px 0 0;
+}
+
+/* ================================= */
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*========================Snacknabar========================*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -122px;
+    background-color: #222629;
+    color: #dfdfdf;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px 16px;
+    position: fixed;
+    z-index: 1;
+    left: 45%;
+    bottom: 50px;
+    font-size: 20px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 50px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/* gdfsfghjhgfdxsxdfghjkjhgcxzxcfgh */
+.section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.section--menu {
+    position: relative;
+    /* overflow: hidden; */
+    /* min-height: 80vh; */
+    padding: 12px;
+}
+
+/* Titania (by @rileyjshaw) */
+.menu--titania .menu__item {
+    margin: 0;
+}
+
+.menu--titania .menu__link {
+    width: 120px;
+    height: 48px;
+    text-align: center;
+    color: #b5b5b5;
+    -webkit-transition: color 0.3s 0.2s;
+    transition: color 0.3s 0.2s;
+}
+
+.menu--titania .menu__link:hover,
+.menu--titania .menu__link:focus {
+    color: #929292;
+}
+
+.menu--titania .menu__item--current .menu__link {
+    color: #d94f5c;
+    -webkit-transition: color 0.7s 0.2s;
+    transition: color 0.7s 0.2s;
+}
+
+.menu--titania .menu__lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    pointer-events: none;
+    border: 2px solid #d94f5c;
+    border-width: 2px 0;
+    -webkit-transition: -webkit-transform 0.5s 0.2s;
+    transition: transform 0.5s 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+    -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+    transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+}
+
+/* vertical lines */
+.menu--titania .menu__lines::before,
+.menu--titania .menu__lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d94f5c;
+    border-width: 0 2px;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+/* animates out at transition start */
+.menu--titania .menu__lines::before {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+/* animates back in at transition end */
+.menu--titania .menu__lines::after {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition: -webkit-transform 0.2s ease 0.7s;
+    transition: transform 0.2s ease 0.7s;
+}
+
+.menu--titania .menu__item:active:not(.menu__item--current) ~ .menu__lines::before,
+.menu--titania .menu__item:active:not(.menu__item--current) ~ .menu__lines::after {
+    -webkit-transition: -webkit-transform 0s;
+    transition: transform 0s;
+}
+
+.menu--titania .menu__item:active:not(.menu__item--current) ~ .menu__lines::before {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.menu--titania .menu__item:active:not(.menu__item--current) ~ .menu__lines::after {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+}
+
+.menu--titania .menu__item:nth-child(1).menu__item--current ~ .menu__lines {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.menu--titania .menu__item:nth-child(2).menu__item--current ~ .menu__lines {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.menu--titania .menu__item:nth-child(3).menu__item--current ~ .menu__lines {
+    -webkit-transform: translate3d(200%, 0, 0);
+    transform: translate3d(200%, 0, 0);
+}
+
+.menu--titania .menu__item:nth-child(4).menu__item--current ~ .menu__lines {
+    -webkit-transform: translate3d(300%, 0, 0);
+    transform: translate3d(300%, 0, 0);
+}
+
+.menu--titania .menu__item:nth-child(5).menu__item--current ~ .menu__lines {
+    -webkit-transform: translate3d(400%, 0, 0);
+    transform: translate3d(400%, 0, 0);
+}
+
+@media screen and (max-width: 55em) {
+    .menu--titania .menu__lines {
+        height: 20%;
+        border-width: 0 2px;
+    }
+
+    /* horizontal lines */
+    .menu--titania .menu__lines::before,
+    .menu--titania .menu__lines::after {
+        border-width: 2px 0;
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+    }
+
+    .menu--titania .menu__lines::before {
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+    }
+
+    .menu--titania .menu__item:active:not(.menu__item--current) ~ .menu__lines::after {
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+    }
+
+    .menu--titania .menu__item:nth-child(1).menu__item--current ~ .menu__lines {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .menu--titania .menu__item:nth-child(2).menu__item--current ~ .menu__lines {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    .menu--titania .menu__item:nth-child(3).menu__item--current ~ .menu__lines {
+        -webkit-transform: translate3d(0, 200%, 0);
+        transform: translate3d(0, 200%, 0);
+    }
+
+    .menu--titania .menu__item:nth-child(4).menu__item--current ~ .menu__lines {
+        -webkit-transform: translate3d(0, 300%, 0);
+        transform: translate3d(0, 300%, 0);
+    }
+
+    .menu--titania .menu__item:nth-child(5).menu__item--current ~ .menu__lines {
+        -webkit-transform: translate3d(0, 400%, 0);
+        transform: translate3d(0, 400%, 0);
+    }
+}

@@ -1,0 +1,349 @@
+<%- include('./includes/head.ejs') %>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body style="margin: 0px;">
+
+    <input type="hidden" name="refresh" value="<%= refresh %>">
+    <iframe class="page_start_anima" src="/svg/heading.html" seamless></iframe>
+
+    <main>
+        <div class=" background_1">
+            <img src="/svg/main_background_1.svg" alt="background">
+        </div>
+
+        <div class="nav_centered" style="height: 112px;">
+            <div class="logo" style="font-size: 40px;">Eyers</div>
+
+            <div class="search_item dummy_class_and_div"></div>
+
+            <div class="align_icons">
+                <!-- Language Translation Icon -->
+                <div id="language_translation" class="lang_transation">
+                    <div class="language_icon">
+                        <img src="/svg/language_icon.svg" alt="account icon">
+                    </div>
+                </div>
+
+                <!-- Account Icon -->
+                <div id="user_login" class="account">
+                    <div class="account_icon">
+                        <img src="/svg/account_icon.svg" alt="account icon">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="star1">
+            <img src="/svg/star.svg" alt="star" data-aos="zoom-in">
+        </div>
+
+        <div class="heading">
+            <span class="heading_data"></span>
+        </div>
+
+        <div class="search_bar">
+            <form action="/results" method="GET" autocomplete="off">
+                <div class="sub_logo">E</div>
+                <div id="datasets">
+                    <input type="text" name="search" id="search" class="typeahead"
+                        placeholder="Search Query / Enter any URL" autofocus required tabindex="1">
+                </div>
+                <div class="magnifier">
+                    <button type="submit">
+                        <img src="/svg/magnifier.svg" alt="magnifier" width="24px" height="24px">
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="dot"></div>
+
+        <!-- History Icon -->
+        <div class="history">
+            <% if (search_queries.length !== 0) { %>
+            <input type="checkbox" id="toggle-1">
+            <% } %>
+            <% if (user_auth !== true) { %>
+            <div class="history_icon_cont" onclick="snackbar()">
+                <img class="history_icon" src="/svg/history_icon.svg" alt="history_icon">
+            </div>
+            <% } else {%>
+            <div class="history_icon_cont">
+                <img class="history_icon" src="/svg/history_icon.svg" alt="history_icon">
+            </div>
+            <% }%>
+
+            <div id="history_list">
+                <% if (search_queries.length > 0) { %>
+                <% for (let query of search_queries) { %>
+                <span><%= query.searched_query %></span>
+                <% } %>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="splash">
+            <img src="/svg/splash.svg" alt="splash">
+        </div>
+
+        <div class="star2">
+            <img src="/svg/star.svg" alt="star" data-aos="zoom-in">
+        </div>
+
+        <div class="navigation">
+            <div class="navigation_text">
+                <a href="#searched_domains">
+                    Frequently Searched Domains
+                    <br>
+                    <a href="#news_feed">News Feed</a>
+                    <br>
+                    <a href="#pop_questions">Popular Questions</a>
+            </div>
+        </div>
+
+        <div class="scroll">
+            <div class="scroll_down">Scroll down</div>
+            <div class="scroll_bk"></div>
+            <div class="scroll_dot"></div>
+        </div>
+
+        <!-- Social media icons -->
+        <div class="shortcut_icons">
+
+            <div class="whatsapp_icon">
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <img src="/svg/whatsapp_icon.svg" alt="whatsapp_icon">
+                </a>
+            </div>
+
+            <div class="facebook_icon">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="/svg/facebook_icon.svg" alt="facebook_icon">
+                </a>
+            </div>
+
+            <div class="linkedin_icon">
+                <a href="https://www.linkedin.com/feed/" target="_blank">
+                    <img src="/svg/linkedin_icon.svg" alt="linkedin_icon">
+                </a>
+            </div>
+
+            <div class="instagram_icon">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="/svg/instagram_icon.svg" alt="instagram_icon">
+                </a>
+            </div>
+        </div>
+
+        <div class="background_2">
+            <img src="/svg/main_background_2.svg" alt="background">
+        </div>
+
+    </main>
+
+    <div class="ss_ulrs" id="searched_domains">
+
+        <div class="centered">
+
+            <div class="Sub_heading">Frequently Searched Domains</div>
+
+            <div class="ss_urls_grid">
+                <% if (search_domains.length > 0) { %>
+                <% for (let i = 0; i < search_domains.length; i++) { %>
+                <div class="ss_url">
+                    <div class="history_website_link">
+                        <a style="color: black;"
+                            href="<%= search_domains[i].searched_query %>"><%= search_domains[i].searched_query %></a>
+                    </div>
+                </div>
+                <% if (i !== search_domains.length-1) { %>
+                <div class="dot_1"></div>
+                <% } %>
+                <% } %>
+                <% } else { %>
+                <h3>No Frequently Searched Domains!</h3>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="news_feed" id="news_feed">
+
+        <div class="centered">
+            <div class="news_icon">
+                <img src="/svg/news_icon.svg" alt="news_icon">
+            </div>
+
+            <div class="news_feed_grid">
+
+                <!-- News feed here -->
+                <% if (news.length > 0) { %>
+                <% for (let i = 0, j = 0; i < news.length; i++, j++) { %>
+                <div class="news" id="news_<%= i+1%>" data-aos="fade-up" data-aos-duration="<%= 500 + j*100 %>"
+                    data-aos-easing="ease-in-out-sine" data-aos-anchor-placement="center-bottom">
+                    <div class="news_img">
+                        <img src="<%= news[i].urlToImage %>" alt="Image_keyword">
+                    </div>
+                    <div class="news_content">
+                        <div class="news_text"><%= news[i].title %></div>
+                        <div class="news_link"><a href="<%= news[i].url%>"><%= news[i].url%></a></div>
+                    </div>
+                </div>
+                <% if(j == 2) {
+                    j = -1
+                }} %>
+                <% } else { %>
+                <h3>No News Feed!</h3>
+                <% } %>
+                <!-- News feed ends over here -->
+
+            </div>
+            <div class="button" onclick="view_news(); AOS.refresh();">
+                <div class="button_text">View More</div>
+            </div>
+        </div>
+        <!-- <canvas class="background_bubbles"></canvas> -->
+    </div>
+
+    <div class="popular_questions" id="pop_questions">
+
+        <div class="centered">
+            <div class="popular_questions_icon">
+                <img src="/svg/popular_questions_icon.svg" alt="popular_question_icon">
+            </div>
+            <div class="questions_grid">
+
+                <!-- Popular Questions here -->
+                <div class="popular_q" id="question_1" data-aos="fade-right" data-aos-duration="400"
+                    data-aos-easing="ease-in-out" data-aos-anchor-placement="bottom-bottom">
+                    <div class="popular_q_content">
+                        <div class="q">Q.</div>
+                        <div class="question_text">Lorem ipsum dolor sit amet consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                            erat?
+                        </div>
+                        <div class="question_link">
+                            <a href="#">
+                                https://www.websitelink.com/questions/popular
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular_q" id="question_2" data-aos="fade-left" data-aos-duration="400"
+                    data-aos-easing="ease-in-out" data-aos-anchor-placement="bottom-bottom">
+                    <div class="popular_q_content">
+                        <div class="q">Q.</div>
+                        <div class="question_text">Lorem ipsum dolor sit amet consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam
+                            erat?
+                        </div>
+                        <div class="question_link">
+                            <a href="#">
+                                https://www.websitelink.com/questions/popular
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular_q" id="question_3" data-aos="fade-right" data-aos-duration="400"
+                    data-aos-easing="ease-in-out" data-aos-anchor-placement="bottom-bottom">
+                    <div class="popular_q_content">
+                        <div class="q">Q.</div>
+                        <div class="question_text">Lorem ipsum dolor sit amet consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam
+                            erat?Lorem ipsum dolor sit amet consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam
+                            erat?
+                        </div>
+                        <div class="question_link">
+                            <a href="#">
+                                https://www.websitelink.com/questions/popular
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular_q" id="question_4" data-aos="fade-left" data-aos-duration="400"
+                    data-aos-easing="ease-in-out" data-aos-anchor-placement="bottom-bottom">
+                    <div class="popular_q_content">
+                        <div class="q">Q.</div>
+                        <div class="question_text">Lorem ipsum dolor sit amet consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam
+                            erat?
+                        </div>
+                        <div class="question_link">
+                            <a href="#">
+                                https://www.websitelink.com/questions/popular
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button" onclick="view_question(); AOS.refresh();">
+                <div class="button_text">View More</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="last_section" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out-sine"
+        data-aos-anchor-placement="bottom-bottom">
+        <div class="centered">
+            <div class="this_project">
+
+                <div class="about">
+                    <div class="Sub_heading">About This Project</div>
+                    <div class="description">
+                        This project is started to understand how the Search Engines work. We are bunch of enthusiast
+                        people inspired by the data available on the internet. And this data is exponentially increasing
+                        day by day. So our aim is to provide the relevant search results to user queries. This data is
+                        present in our database.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <%- include('./includes/footer.ejs') %>
+    <!-- Language Modal Section -->
+    <%- include('./includes/language_popup.ejs') %>
+    <!-- User Authentication Modal Section -->
+    <%- include('./includes/auth_popup.ejs') %>
+    <div id="snackbar">You are not logged In to access this feature..</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.js"></script>
+    <script src="/js/language_popup-modal.js"></script>
+    <script src="/js/auth_popup-modal.js"></script>
+
+    <!-- Typeahead  -->
+    <script src="/js/typeahead.js"></script>
+
+    <script src="/js/index_util.js"></script>
+
+
+    <!-- for Particle Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <!-- for Typed Js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script src="/js/index_animation.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
