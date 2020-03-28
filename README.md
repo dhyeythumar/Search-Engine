@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Eyers" src="https://github.com/Dhyeythumar/Search_Engine/assets/logo.svg" width="110" />
+    <img alt="Eyers" src="https://github.com/Dhyeythumar/Search_Engine/blob/master/assets/logo.svg" width="110" />
 </p>
 <h1 align="center">
   Search Engine
