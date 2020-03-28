@@ -5,11 +5,11 @@
   Search Engine
 </h1>
 
-<h3 align="center">
+<h4 align="center">
   Made with Node JS and Python
-</h3>
+</h4>
 
-<h3 align="center">
+<h5 align="center">
     Quick Search
   <span> · </span>
   Frequently Searched Domains
@@ -21,7 +21,7 @@
   Popular websites in one go
   <span> · </span>
   Popular Questions
-</h3>
+</h5>
 
 ## Introduction
 I was eager to learn how the search engine works, so it is an attempt to create one. This project is powered by the data available on the internet. And this data is exponentially increasing day by day. It uses web crawling to get this data from each web page and stores them into a MySQL database. This data is then displayed based on the user's queries.
