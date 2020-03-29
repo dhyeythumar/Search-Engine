@@ -40,7 +40,7 @@
 
 ## Introduction
 
-I was eager to learn how the search engine works, so it is an attempt to create one. This project is powered by the data available on the internet. And this data is exponentially increasing day by day. It uses web crawling to get this data from each web page and stores them into a MySQL database. This data is then displayed based on the user's queries. See the image [**here**](./images.md).
+I was eager to learn how the search engine works, so it is an attempt to create one. This project is powered by the data available on the internet. And this data is exponentially increasing day by day. It uses web crawling to get this data from each web page and stores them into a MySQL database. This data is then displayed based on the user's queries. See the front-end image [**here**](./images.md).
 
 
 ## Prerequisites Tools
