@@ -6,7 +6,11 @@
 <img alt="er-model" src="./assets/er-model.png" width="80%" height="80%" />
 </p>
 
-<hr>
+<p style="font-weigth:700; font-size:18px;color:" align="center">
+<br/>
+ •  •  •  • 
+</p>
+
 
 **2. Relational Schema :**
 
