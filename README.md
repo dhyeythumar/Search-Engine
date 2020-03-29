@@ -1,3 +1,4 @@
+<h6></h6>
 <p align="center">
     <img alt="Eyers" src="https://github.com/Dhyeythumar/Search_Engine/blob/master/assets/logo.svg" width="110" />
 </p>
