@@ -28,14 +28,14 @@
 
 
 ## What’s In This Document
-- [Introduction](#-introduction)
-- [Prerequisites Tools](#-prerequisites-tools)
-- [Setup Instructions](#-setup-instructions)
-- [Getting Started](#-getting-started)
-- [Implementation](#-implementation)
-- [Failure and Scope of Improvement](#-failure-and-scope-of-improvement)
-- [Future Development](#-future-development)
-- [License](#-license)
+- [Introduction](#introduction)
+- [Prerequisites Tools](#prerequisites-tools)
+- [Setup Instructions](#setup-instructions)
+- [Getting Started](#getting-started)
+- [Implementation](#implementation)
+- [Failure and Scope of Improvement](#failure-and-scope-of-improvement)
+- [Future Development](#future-development)
+- [License](#license)
 
 
 ## Introduction
@@ -81,7 +81,7 @@ $ pip install -r requirements.txt
 ```
 
 
-## :rocket: Getting Started
+## Getting Started
 
 You can run this project by just executing this command:
 ```bash
@@ -105,7 +105,7 @@ Language translation is implemented by using Textblob (a python library) by spaw
 The news section is populated by fetching the data from a news API.
 
 
-## :bar_chart: Failure and Scope of Improvement
+## Failure and Scope of Improvement
 I have identified some of the failures in my project for which improvements can be done but without those changes also project is working just fine.
 
 **1. Modification of web-scraper :**
@@ -124,9 +124,9 @@ When the query is entered there is some sort of delay in processing it because i
 I have not implemented the data preprocessing on the raw data which I got from the internet scraped by the bot.
 
 
-## :telescope: Future Development
+## Future Development
 I will implement all of the above-stated improvements to this project so stay tuned to this repo.
 
 
-## :page_with_curl: License
+## License
 Licensed under the [GNU General Public License v3.0](./LICENSE).
