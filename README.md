@@ -46,13 +46,13 @@ I was eager to learn how the search engine works, so it is an attempt to create 
 ## Prerequisites Tools
 
 - **News API :**
-To run this project you will require News API and you get this [**over here**](https://newsapi.org). Place this API key in this [**file**](./models/news_api.js).
+To run this project you would require News API and you can get this [**over here**](https://newsapi.org). Replace your API key with `--API key here--` in this [**file**](./models/news_api.js).
 
 - **MySQL Database :**
-Also you will require a database from where the queries will execute. You can refer the database schema used in this project [**here**](./database_schema.md).
+You would also require a database from where the queries can execute. You can refer the database schema used in this project [**here**](./database_schema.md).
 
 - **Web Crawler :**
-It is required to crawl the internet and scrape the data from webpages and store them in MySQL database. I have created web-crawler/web-spider to accomplish this task but its not been included in this repo if you want my scraper then contact me [**here**](https://dhyeythumar.github.io/my_portfolio/about.html#contact-form).
+You would also require a crawler to crawl the internet and scrape the data from webpages and store them in MySQL database. I have created web-crawler/web-spider to accomplish this task but its not been included in this repo if you want my scraper then contact me [**here**](https://dhyeythumar.github.io/my_portfolio/about.html#contact-form).
 Or else you can also use [**Scrapy**](https://scrapy.org/).
 
 
