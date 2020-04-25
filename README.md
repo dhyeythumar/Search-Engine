@@ -60,7 +60,7 @@ Or else you can also use [**Scrapy**](https://scrapy.org/).
 
 Clone the repository
 ```bash
-$ git clone https://github.com/Dhyeythumar/Search_Engine.git
+$ git clone https://github.com/Dhyeythumar/Search-Engine.git
 $ cd Search_Engine
 ```
 **1. Install Node JS Dependency**
