@@ -49,7 +49,7 @@ I was eager to learn how the search engine works, so it is an attempt to create 
 To run this project you would require News API and you can get this [**over here**](https://newsapi.org). Replace your API key with `--API key here--` in this [**file**](./models/news_api.js).
 
 - **MySQL Database :**
-You would also require a database from where the queries can execute. You can refer the database schema used in this project [**here**](./database_schema.md).
+You would also require a database on which the queries can be executed. You can refer the database schema used in this project [**here**](./database_schema.md).
 
 - **Web Crawler :**
 You would also require a crawler to crawl the internet and scrape the data from webpages and store them in MySQL database. I have created web-crawler/web-spider to accomplish this task but its not been included in this repo if you want my scraper then contact me [**here**](https://dhyeythumar.github.io/my_portfolio/about.html#contact-form).
