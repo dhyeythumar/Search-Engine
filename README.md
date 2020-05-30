@@ -66,8 +66,6 @@ $ cd Search_Engine
 **1. Install and Update Node JS Dependency**
 ```bash
 $ npm install
-```
-```bash
 $ npm update
 ```
 
