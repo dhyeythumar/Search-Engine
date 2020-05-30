@@ -78,7 +78,7 @@ $ pip install -r requirements.txt
 
 ## Getting Started
 
-You can run this project by just executing this command:
+Run this project by just executing this command:
 ```bash
 $ npm start
 ```
