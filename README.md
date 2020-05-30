@@ -69,10 +69,6 @@ $ cd Search_Engine
 ```bash
 $ npm install
 ```
-- Using yarn
-```bash
-$ npm yarn
-```
 
 **2. Install Python Dependency**
 ```bash
