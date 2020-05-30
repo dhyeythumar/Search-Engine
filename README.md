@@ -63,11 +63,12 @@ Clone the repository
 $ git clone https://github.com/Dhyeythumar/Search-Engine.git
 $ cd Search_Engine
 ```
-**1. Install Node JS Dependency**
-
-- Using npm
+**1. Install and Update Node JS Dependency**
 ```bash
 $ npm install
+```
+```bash
+$ npm update
 ```
 
 **2. Install Python Dependency**
