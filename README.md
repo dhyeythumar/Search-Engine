@@ -1,6 +1,6 @@
 <h6></h6>
 <p align="center">
-    <img alt="Eyers" src="./assets/logo.svg" width="110" />
+    <img alt="Eyers" src="./assets/logo.svg" width="110" height="100" />
 </p>
 <h1 align="center">
   Search Engine
