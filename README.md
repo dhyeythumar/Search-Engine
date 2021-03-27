@@ -1,4 +1,4 @@
-<h6></h6>
+<div>
 <p align="center">
     <img alt="Eyers" src="./assets/logo.svg" width="110"/>
 </p>
@@ -25,6 +25,7 @@
   <span> · </span>
   Frequently Searched Domains
 </h5>
+</div>
 
 
 ## What’s In This Document
@@ -58,18 +59,18 @@ Or else you can also use [**Scrapy**](https://scrapy.org/).
 
 ## Setup Instructions
 
-Clone the repository
+- Clone the repository
 ```bash
 $ git clone https://github.com/Dhyeythumar/Search-Engine.git
 $ cd Search_Engine
 ```
-**1. Install and Update Node JS Dependency**
+- Install and Update Node JS Dependency
 ```bash
 $ npm install
 $ npm update
 ```
 
-**2. Install Python Dependency**
+- Install Python Dependency
 ```bash
 $ cd Python_scripts
 $ pip install -r requirements.txt
@@ -109,14 +110,14 @@ The scraper which I created is just fetching the page title, description, and ke
 
 **2. Monotonous data :**
 This occurs in the database due to my scraping pattern. I have implemented depth-first scraping i.e when I start with a particular URL I go on scraping those new URLs which are belonging to the same base URL, and keep a record of foreign URLs. After completing a particular website (which can have millions of pages) I start with the foreign URL and the process repeats. So by doing this, I have to wait until the whole website is scraped.
-- **Improvement to this problem** can be the implementation of the breadth-first scraping i.e not checking the similarity of the domains.
+- **Improvement to this problem** can be done by implementing a breadth-first scraping i.e not checking for the similarity of the domains just go with the sequence of links.
 
 **3. Slow access to the database :**
 When the query is entered there is some sort of delay in processing it because it is lemmatized by a python code that is been spawned from node js. And it's also due to complex join query execution for each search term.
-- **Improvement to this problem** can be the improvement of the database schema and using the javascript libraries to implement lemmatization.
+- **Improvement to this problem** can be done by improving the database schema and using the javascript libraries to implement text processing.
 
 **4. Data preprocessing :**
-I have not implemented the data preprocessing on the raw data which I got from the internet scraped by the bot.
+I have not implemented the data preprocessing on the raw data which I got from the internet scraped by the bot. This is the crucial part to maintain the huge textual data.
 
 
 ## Future Development
